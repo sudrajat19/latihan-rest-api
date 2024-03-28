@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "ip": "^2.0.1",
+    "js": "^0.1.0",
+    "md5": "^2.3.0",
+    "mysql": "^2.18.1",
+    "node": "^18.20.0",
+    "validator": "^13.11.0"
+  },
+  "name": "latihan-rest-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudrajat19/latihan-rest-api.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "sudrajat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sudrajat19/latihan-rest-api/issues"
+  },
+  "homepage": "https://github.com/sudrajat19/latihan-rest-api#readme",
+  "description": ""
+}
