@@ -4,6 +4,12 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+let router = require('./router');
+router(app);
+
+
 app.listen(3000, () => {
     console.log("Server is running on port")
 });
+
