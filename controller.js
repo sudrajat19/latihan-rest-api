@@ -47,3 +47,22 @@ exports.tambahUsers = function(req,res){
         }
     });
 }
+
+
+//mengubah data berdasarkan id
+exports.ubahDataUsers = function(req,res){
+    let id_users = req.body.id_users;
+    let nama = req.body.nama;
+    let password = req.body.password;
+    let photo = req.body.photo;
+    let deskripsi = req.body.deskripsi;
+    let profesi =req.body.profesi;
+
+    connection.query('UPDATE users SET nama=?, password=?, photo=?, deskripsi=?, profesi=? WHERE id_users=?',[nama,password,photo,deskripsi,profesi,id_users], function(error,rows,fields){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok('berhasil merubah data', res);
+        }
+    });
+}
