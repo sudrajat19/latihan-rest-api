@@ -66,3 +66,17 @@ exports.ubahDataUsers = function(req,res){
         }
     });
 }
+
+//menghapus data berdasar id
+
+exports.hapusDataUsers=function(req,res) {
+    let id_users = req.body.id_users;
+    connection.query("DELETE FROM users WHERE id_users = ?",[id_users], function(error,rows,fields){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok('data berhasil di hapus',res);
+        }
+
+    });
+}

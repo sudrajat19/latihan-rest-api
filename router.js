@@ -17,4 +17,7 @@ module.exports = function(app){
 
     app.route('/ubah')
         .put(myJson.ubahDataUsers);
+
+    app.route('/hapus')
+        .delete(myJson.hapusDataUsers);
 };
