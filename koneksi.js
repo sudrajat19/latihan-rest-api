@@ -12,4 +12,4 @@ conn.connect((err) =>{
     console.log("Connected");
 });
 
-module.exports = conn
+module.exports = conn;

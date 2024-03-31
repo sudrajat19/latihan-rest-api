@@ -1,8 +1,11 @@
 'use strict';
 
 module.exports = function(app){
-    let msJson = require('./controller');
+    let myJson = require('./controller');
 
-    app.route('./')
+    app.route('/')
         .get(myJson.index);
+
+    app.route('/tampil')
+        .get(myJson.tampilUsers);
 };
