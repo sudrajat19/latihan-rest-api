@@ -11,4 +11,7 @@ module.exports = function(app){
 
     app.route('/tampil/:id')
         .get(myJson.tampilUsersId);
+
+    app.route('/tambah')
+        .post(myJson.tambahUsers);
 };

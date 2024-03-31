@@ -19,13 +19,31 @@ exports.tampilUsers = function (req,res){
 }
 
 //menampilkan data berdasarkan id
-exports,this.tampilUsersId = function(req,res){
+exports.tampilUsersId = function(req,res){
     let id = req.params.id;
     connection.query('SELECT * FROM users WHERE id_users = ?', [id], function(error, rows, fields){
         if(error){
             console.log(error);
         }else{
             response.ok(rows,res);
+        }
+    });
+}
+
+//menambahkan data users
+exports.tambahUsers = function(req,res){
+    let id_users = req.body.id_users;
+    let nama = req.body.nama;
+    let password = req.body.password;
+    let photo = req.body.photo;
+    let deskripsi = req.body.deskripsi;
+    let profesi =req.body.profesi;
+
+    connection.query('INSERT INTO users (id_users,nama, password, photo, deskripsi, profesi) VALUES (?,?,?,?,?,?)',[id_users, nama, password, photo, deskripsi, profesi], function(error,rows,fields){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok('berhasil menambahkan data',res);
         }
     });
 }
