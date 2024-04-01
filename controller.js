@@ -80,3 +80,17 @@ exports.hapusDataUsers=function(req,res) {
 
     });
 }
+
+//menampilkan skill grup
+
+exports.tampilGrupSkill = function(req, res){
+    connection.query('SELECT users.nama, skill.nama_skill FROM users INNER JOIN skill ON users.id_users = skill.id_users ORDER BY users.nama;',
+    function(error,rows,fields){
+        if(error){
+            console.log(error);
+        }else{
+            response.oknested(rows,res);
+        }
+    }
+    )
+}
